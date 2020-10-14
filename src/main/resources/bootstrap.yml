@@ -1,8 +1,7 @@
 aws:
     secretsmanager:
-        name: backend
-        prefix: /secret
+        name: tomcat/staging
 cloud:
     aws:
         region:
-            static: ap-southeast-1
+            static: us-west-1

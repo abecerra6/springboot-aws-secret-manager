@@ -17,24 +17,15 @@ import java.util.Map;
 @RequestMapping(value = "/api/test")
 public class TestController {
 
-    @Value(value = "${application.id}")
-    private String applicationId;
+    @Value(value = "${aesUtilsSecretKey}")
+    private String aesUtilsSecretKey;
 
-    @Value(value = "${environment}")
-    private String environment;
-
-    @Value(value="${categories.types:#{null}}")
-    private String[] categoryTypes;
 
     @RequestMapping(value = "v1", method = RequestMethod.GET)
     public Map<String, Object> getProperties(HttpServletRequest request) {
 
         final Map<String, Object> map = new HashMap<>();
-        map.put("applicationId", applicationId);
-        map.put("environment", environment);
-        map.put("types", categoryTypes);
+        map.put("aesUtilsSecretKey", aesUtilsSecretKey);
         return map;
     }
-
-
 }

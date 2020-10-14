@@ -39,11 +39,11 @@ bootstrap.yml
 ````
 aws:
     secretsmanager:
-        name: backend
+        name: secretname
 cloud:
     aws:
         region:
-            static: ap-southeast-1
+            static: region
 
 ````
 
@@ -83,11 +83,7 @@ java -jar app.jar
 curl http://13.250.38.249:8090/api/test/v1
 
 {
-environment: "aws",
-types:- [
-"AWSzone001"
-],
-applicationId: "backend-test"
+ ...
 }
 
 ````

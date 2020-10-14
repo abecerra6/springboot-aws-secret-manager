@@ -1,5 +1,3 @@
 environment: local
-application.id: backend-test
+aesUtilsSecretKey: myLocalPassword*!
 
-## list properties
-categories.types: zone001,zone002,zone003
